@@ -1,4 +1,4 @@
-export enum CardValor{
+export enum CardValue{
     Deux,
     Trois,
     Quatre,

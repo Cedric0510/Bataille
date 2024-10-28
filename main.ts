@@ -1,7 +1,12 @@
 import { Card } from "./card";
 import { CardFamily } from "./CardFamily";
-import { CardValor } from "./CardValor";
+import { CardValue } from "./CardValue";
+import { Deck } from "./deck";
 
-const card = new Card();
+const card = new Card(CardValue.Roi,CardFamily.Coeur);
 
-card.createOneCard(Deux, Coeur);
+const deck = new Deck()
+deck.createDeck();
+
+console.log(deck.getDeck())
+console.log(card.DisplayOneCard());

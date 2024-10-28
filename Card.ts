@@ -1,23 +1,23 @@
 import { CardFamily } from "./CardFamily";
-import { CardValor } from "./CardValor";
+import { CardValue } from "./CardValue";
 import { Deck} from "./deck";
 
 export class Card extends Deck{
-    private cardValor : CardValor;
-    private family: CardFamily;
+    protected cardValue : CardValue;
+    protected family: CardFamily;
 
 
-    constructor (cardValor : CardValor, family : CardFamily){
+    constructor (cardValue : CardValue, family : CardFamily){
         super();
-        this.cardValor = cardValor;
+        this.cardValue = cardValue;
         this.family = family;
     }
 
 
-    public createOneCard(cardValor :CardValor, family:CardFamily):string{
-
-        return `${this.cardValor} ${this.family}`
+    public DisplayOneCard():string{
+        return `${CardValue[this.cardValue]} de ${CardFamily[this.family]}`
+        
     };
 
-
+ 
 }
