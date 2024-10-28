@@ -25,7 +25,16 @@ export class Deck {
     }
 
 
-    // public shuffleCards(card: Card): void {
-    //     // Mélangé les 52 cartes créé et distribuer.
-    // }
+    shuffleDeck(): void {
+        let currentIndex = this.decks.length;
+        let randomIndex;
+        let tempValue;
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            tempValue = this.decks[currentIndex];
+            this.decks[currentIndex] = this.decks[randomIndex];
+            this.decks[randomIndex] = tempValue;
+        }
+    }
 }
