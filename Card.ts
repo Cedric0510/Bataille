@@ -14,10 +14,10 @@ export class Card extends Deck{
     }
 
 
-    public createAllCards(cardValor :CardValor, family:CardFamily):void{
-        // Générer les 52 cartes sans doublons
+    public createOneCard(cardValor :CardValor, family:CardFamily):string{
+
+        return `${this.cardValor} ${this.family}`
     };
 
-    
 
 }
