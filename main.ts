@@ -6,19 +6,25 @@ import { Deck } from "./deck";
 import { Player } from "./player";
 
 const card = new Card(CardValue.Roi,CardFamily.Coeur);
+// console.log(card.DisplayOneCard());
+
 
 const deck = new Deck()
 deck.createDeck();
-console.log(deck.shuffleDeck())
-console.log(deck.getDeck())
-// console.log(card.DisplayOneCard());
-// const Player1 = new Player("Gérard");
-// const Player2= new Player("Michel");
+deck.shuffleDeck();
+// console.log(deck.shuffleDeck())
+// console.log(deck.getDeck())
 
-// const battle = new Battle()
+const Player1 = new Player("Gérard");
+const Player2= new Player("Michel");
 
-// battle.addPlayer(Player1);
-// battle.addPlayer(Player2);
 
-// console.log(Player1)
+const bataille = new Battle()
+ bataille.dealCards();
+console.log(Player1.getHand());
+
+console.log(bataille.addPlayer(Player1))
+console.log(bataille.addPlayer(Player2))
+
+console.log(Player1)
 

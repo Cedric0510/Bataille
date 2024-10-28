@@ -1,12 +1,11 @@
 import { Card } from "./card";
 import { Deck } from "./deck";
 
-export class Player extends Deck{
+export class Player{
     private name : string;
     private hand: Card[];
 
     constructor (name : string){
-        super();
         this.name = name;
         this.hand = [];
     }

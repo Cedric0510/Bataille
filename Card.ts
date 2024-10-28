@@ -1,14 +1,12 @@
 import { CardFamily } from "./CardFamily";
 import { CardValue } from "./CardValue";
-import { Deck} from "./deck";
 
-export class Card extends Deck{
+export class Card {
     protected cardValue : CardValue;
     protected family: CardFamily;
 
 
     constructor (cardValue : CardValue, family : CardFamily){
-        super();
         this.cardValue = cardValue;
         this.family = family;
     }
