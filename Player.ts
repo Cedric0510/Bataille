@@ -5,7 +5,7 @@ export class Player extends Deck{
     private name : string;
     private hand: Card[];
 
-    constructor (name : string, hand : []){
+    constructor (name : string){
         super();
         this.name = name;
         this.hand = [];
