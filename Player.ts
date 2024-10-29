@@ -26,7 +26,7 @@ export class Player{
     }
 
     public displayHand(){
-        return this.hand.map(card => card.DisplayCard()).join(",")
+        return this.hand.map(card => card.DisplayCard()).join(",");
     }
 
 }
