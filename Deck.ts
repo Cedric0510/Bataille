@@ -1,6 +1,7 @@
 import { Card } from "./card"
 import { CardFamily } from "./CardFamily";
 import { CardValue } from "./CardValue";
+
 export class Deck {
 
     private decks: Card[];
@@ -11,11 +12,9 @@ export class Deck {
 
 
     public createDeck(): void {
-        for (let i = 0; i < 4; i++) {
-            for (let j = 0; j < 13; j++) {
-                this.decks.push(new Card(CardValue[j as unknown as keyof typeof CardValue
-                ], CardFamily[i as unknown as keyof typeof CardFamily]
-                ));
+        for (let i = 0; i < 13; i++) {
+            for (let j = 0; j < 4; j++) {
+                this.decks.push(new Card(i as CardValue, j as CardFamily));
             }
         }
     }
@@ -37,4 +36,5 @@ export class Deck {
             this.decks[randomIndex] = tempValue;
         }
     }
+    
 }

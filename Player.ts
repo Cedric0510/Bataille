@@ -1,9 +1,8 @@
 import { Card } from "./card";
-import { Deck } from "./deck";
 
 export class Player{
     private name : string;
-    private hand: Card[];
+    protected hand: Card[];
 
     constructor (name : string){
         this.name = name;
@@ -24,6 +23,10 @@ export class Player{
 
     public playCard():Card{
         return this.hand.shift() as Card;
+    }
+
+    public displayHand(){
+        return this.hand.map(card => card.DisplayCard()).join(",")
     }
 
 }

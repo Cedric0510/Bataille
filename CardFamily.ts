@@ -1,6 +1,6 @@
 export enum CardFamily{
-    Coeur,
-    Carreau,
-    Pique,
-    Trèfle,
+    Coeur = 0,
+    Carreau = 1,
+    Pique = 2,
+    Trèfle = 3,
 }
